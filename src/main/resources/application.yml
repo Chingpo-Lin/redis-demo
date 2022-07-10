@@ -1,0 +1,59 @@
+
+server:
+  port: 8080
+
+
+spring:
+#cache type
+  cache:
+    type: redis
+
+  redis:
+    host: 120.24.94.91
+    port: 6379
+    password: ljb112233
+
+#指定redis底层客户端实现
+  client-type: lettuce
+
+  lettuce:
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 10
+
+      # 连接池中的最大空闲连接
+      max-idle: 10
+
+      # 连接池中的最小空闲连接
+      min-idle: 0
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1ms
+
+#
+#    jedis:
+#      pool:
+## 连接池最大连接数（使用负值表示没有限制）
+#        max-active: 10
+#
+## 连接池中的最大空闲连接
+#        max-idle: 10
+#
+## 连接池中的最小空闲连接
+#        min-idle: 0
+## 连接池最大阻塞等待时间（使用负值表示没有限制）
+#        max-wait: -1ms
+
+
+
+#==============================数据库相关配置========================================
+#数据库配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.24.94.91:3306/redis?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: xdclass.net168
+
+#配置plus打印sql日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
