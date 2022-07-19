@@ -11,7 +11,7 @@ spring:
   redis:
     host: 120.24.94.91
     port: 6379
-    password: ljb112233
+    password: cannot let u know
 
 #指定redis底层客户端实现
   client-type: lettuce
@@ -51,7 +51,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://120.24.94.91:3306/redis?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: xdclass.net168
+    password: cannot let u know
 
 #配置plus打印sql日志
 mybatis-plus:
